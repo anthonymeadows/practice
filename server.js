@@ -1,4 +1,4 @@
-import { Pool } from 'pg';
+import pg from 'pg';
 import express from 'express';
 import dotenv from 'dotenv';
 
@@ -8,9 +8,8 @@ const app = express();
 const expressport = process.env.PORT || 8000;
 const connectionString = process.env.DATABASE_URL;
 
-
-const pool = new Pool ({
-
+const pool = new Pool({
+    connectionString,
 })
 
 app.listen(3000, () =>
