@@ -12,6 +12,9 @@ const pool = new Pool({
     connectionString,
 })
 
-app.listen(3000, () =>
-  console.log('Listening on port 3000...'),
+app.use(express.static("public"));
+app.use(express.json());
+
+app.listen(expressport, () =>
+  console.log(`Listening on port ${expressport}....`),
 );

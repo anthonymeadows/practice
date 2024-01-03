@@ -19,6 +19,8 @@ https://node-postgres.com/
     - node pg docs
 https://dashboard.render.com
     - db and website deployemnt
+https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux
+    - If you get "port already in use" try this command
 
 ```mermaid
 ---
