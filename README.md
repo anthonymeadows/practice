@@ -13,6 +13,7 @@ erDiagram
     }
     foods {
         id serial PK
+        name varchar(50)
         ingredients varchar(2500)
         instructions varchar(5000)
         user_id integer FK
