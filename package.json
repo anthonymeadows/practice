@@ -1,0 +1,32 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "chefs make food",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonymeadows/practice.git"
+  },
+  "keywords": [
+    "chef",
+    "food",
+    "yum",
+    "ant"
+  ],
+  "author": "Anthony Meadows",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonymeadows/practice/issues"
+  },
+  "homepage": "https://github.com/anthonymeadows/practice#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  }
+}
