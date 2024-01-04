@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS foods (
     name varchar(255),
     ingredients text,
     instructions text,
-    user_id integer REFERENCES chefs(id)
+    chef_id integer REFERENCES chefs(id) ON DELETE CASCADE
 );
 
 -- Insert data
@@ -22,7 +22,7 @@ INSERT INTO chefs (username) VALUES
     ('chefBob'),
     ('chefCharlie');
 
-INSERT INTO foods (name, ingredients, instructions, user_id) VALUES
+INSERT INTO foods (name, ingredients, instructions, chef_id) VALUES
     ('Spaghetti Bolognese', 'Ground beef, onion, garlic, tomatoes, spaghetti, olive oil, salt, pepper', '1. Heat olive oil in a pan. 2. Add chopped onion and garlic. 3. Add ground beef and cook until browned. 4. Stir in chopped tomatoes. 5. Cook spaghetti. 6. Serve Bolognese sauce over spaghetti.', 1),
     ('Chicken Alfredo', 'Chicken breast, fettuccine pasta, heavy cream, Parmesan cheese, butter, garlic, salt, pepper', '1. Cook fettuccine pasta. 2. Season chicken and cook in butter. 3. Add minced garlic and heavy cream. 4. Stir in Parmesan cheese. 5. Mix with cooked pasta.', 2),
     ('Vegetable Stir-Fry', 'Broccoli, carrots, bell peppers, soy sauce, ginger, garlic, vegetable oil', '1. Heat oil in a wok. 2. Add minced garlic and ginger. 3. Stir in chopped vegetables. 4. Add soy sauce. 5. Cook until vegetables are tender-crisp.', 3),

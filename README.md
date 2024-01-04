@@ -21,7 +21,8 @@ https://dashboard.render.com
     - db and website deployemnt
 https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux
     - If you get "port already in use" try this command
-
+https://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings-settings
+    - jQuery Docs
 ```mermaid
 ---
 title: Entity Relationship Diagram

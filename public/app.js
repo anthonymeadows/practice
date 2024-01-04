@@ -4,18 +4,19 @@ $(document).ready( () => {
 
 function addButtonEvents() {
     $('#create').on('click', (e) => {
-        let name = {'name': 'Chef ' + getRandomName(5)}
+        let name = {'name': $('#Chef-name').val()}
         $.ajax({
             url: '/createUser',
             method: 'POST',
             contentType:'application/json',
             data: JSON.stringify(name),
             success: function(response) {
-              console.log(name.name + ' added to the database');
+              console.log(response);
               alert('Success - see console')
             },
             error: function(xhr, status, error) {
               console.error('Error:', status, error);
+              console.log(xhr)
             }
         });
     });
@@ -30,15 +31,17 @@ function addButtonEvents() {
             },
             error: function(xhr, status, error) {
               console.error('Error:', status, error);
+              console.log(xhr)
             }
         });
     });
   
     $('#update').on('click', (e) => {
         $.ajax({
-            url: '/update',
+            url: '/updateChefName',
             method: 'PUT',
-            data: { key1: 'value1', key2: 'value2' },
+            contentType:'application/json',
+            data: JSON.stringify({ oldName: $('#Chef-name').val(), newName: $('#New-name').val()}),
             success: function(response) {
               alert('Success:', response);
             },
@@ -53,27 +56,17 @@ function addButtonEvents() {
         $.ajax({
             url: '/delete',
             method: 'DELETE',
-            data: { key1: 'value1', key2: 'value2' },
+            contentType:'application/json',
+            data: JSON.stringify({chef: $('#Chef-name').val()}),
             success: function(response) {
-              alert('Success:', response);
+              console.log('Success:', response);
             },
             error: function(xhr, status, error) {
               console.error('Error:', status, error);
+              console.log(xhr)
             }
         });
     });
-}
-
-function getRandomName(length) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    let randomName = '';
-
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        randomName += characters.charAt(randomIndex);
-    }
-
-    return randomName;
 }
 
 /* 
@@ -81,6 +74,7 @@ function getRandomName(length) {
 $.ajax({
   url: 'your_server_endpoint',   // The URL to which the request is sent
   method: 'GET',                  // The HTTP method (GET, POST, PUT, DELETE, etc.)
+  contentType:'application/json' or etc,
   data: { key1: 'value1', key2: 'value2' },  // Data to be sent to the server
   success: function(response) {
     // Function to be called if the request succeeds
