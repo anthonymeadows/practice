@@ -1,32 +1,55 @@
-One chef creates many food items to be viewed by all other chefs
+# Chefs Delight - CRUD Application
 
-Foods may be in the database many times, as chefs make them differently
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+4. [Dependencies](#dependencies)
+5. [Helpful Links](#helpful-links)
+6. [Entity Relationship Diagram](#entity-relationship-diagram)
 
-TO RUN
-
-1. npm install
-2. change .env.template to .env
-3. change .env data to your needs and use case
-    3a- Port and DBURL should both be strings. DBURL should end in ?ssl=true
-4. run init.sql in your db
-5.
+## Introduction 
+Chefs Delight is a simple CRUD (Create, Read, Update, Delete) application built using Node.js, Express, and PostgreSQL. This application allows you to manage a list of chefs and their associated recipes.
 
 
-helpful links
-https://expressjs.com/en/starter/hello-world.html
-    - express docs
-https://node-postgres.com/
-    - node pg docs
-https://dashboard.render.com
-    - db and website deployemnt
-https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux
-    - If you get "port already in use" try this command
-https://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings-settings
-    - jQuery Docs
+## Getting Started
+
+To run the application, follow these steps:
+
+```bash
+npm install
+```
+
+Rename ```.env.template``` to ```.env``` and update the data in the file according to your needs and use case. Make sure to set PORT and DBURL as strings, where DBURL should end in ?ssl=true.
+
+```bash
+node server.js
+```
+
+## Usage
+
+The application provides a web interface to perform CRUD operations on chefs and their recipes. Use the provided buttons (CREATE, READ, UPDATE, DELETE) to interact with the data. Input fields are available for providing necessary information.
+
+## Dependencies
+- Express: Fast, unopinionated, minimalist web framework for Node.js.
+- Node.js: JavaScript runtime built on Chrome's V8 JavaScript engine.
+- PostgreSQL: Powerful, open-source object-relational database system.
+- jQuery: Fast, small, and feature-rich JavaScript library.
+
+## Helpful Links
+[Express.js Documentation](https://expressjs.com/en/starter/hello-world.html)
+
+[Node.js Documentation](https://node-postgres.com/)
+
+[jQuery Documentation](https://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings-settings)
+
+[Free Website and Database Deployment](https://dashboard.render.com/)
+
+[Kill all node processes](https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux
+)
+## Entity Relationship Diagram
+
 ```mermaid
----
-title: Entity Relationship Diagram
----
 erDiagram
     chefs {
         id serial PK
@@ -42,3 +65,5 @@ erDiagram
 
     chefs ||--o{ foods : create
 ```
+
+
