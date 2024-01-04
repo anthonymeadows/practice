@@ -1,0 +1,8 @@
+#display-box {
+    border: 1px solid black;
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
