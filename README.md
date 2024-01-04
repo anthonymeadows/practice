@@ -9,7 +9,7 @@
 6. [Entity Relationship Diagram](#entity-relationship-diagram)
 
 ## Introduction 
-Chefs Delight is a simple CRUD (Create, Read, Update, Delete) application built using Node.js, Express, and PostgreSQL. This application allows you to manage a list of chefs and their associated recipes.
+Welcome to Chefs Delight! This is a concise CRUD application, exemplifying the synergy of Express, PostgreSQL, and DOM manipulation. Explore how these technologies seamlessly come together to manage chefs and their recipes. Dive into the world of web development with this practical demonstration.
 
 
 ## Getting Started
@@ -30,6 +30,15 @@ node server.js
 
 The application provides a web interface to perform CRUD operations on chefs and their recipes. Use the provided buttons (CREATE, READ, UPDATE, DELETE) to interact with the data. Input fields are available for providing necessary information.
 
+```CREATE``` - Enter the username desired to be added to the database, and click the CREATE button
+
+```READ``` - Logs all recipes to the console
+
+```UPDATE``` - Enter in desired username to be changed, and the desired username4 and click UPDATE. Results will log to the console.
+
+```DELETE``` - Enter the username desired to be deleted to the database, and click the DELETE button
+
+
 ## Dependencies
 - Express: Fast, unopinionated, minimalist web framework for Node.js.
 - Node.js: JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -48,6 +57,7 @@ The application provides a web interface to perform CRUD operations on chefs and
 [Kill all node processes](https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux
 )
 ## Entity Relationship Diagram
+The diagram illustrates the relationship between the 'chefs' and 'foods' tables, with 'chefs' having a one-to-many relationship with 'foods'.
 
 ```mermaid
 erDiagram
